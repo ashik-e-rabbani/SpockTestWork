@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.6'
+    testImplementation "org.spockframework:spock-core:2.0-M4-groovy-3.0"
+// https://mvnrepository.com/artifact/org.codehaus.groovy.modules.http-builder/http-builder
+    implementation group: 'org.codehaus.groovy.modules.http-builder', name: 'http-builder', version: '0.6'
+// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
